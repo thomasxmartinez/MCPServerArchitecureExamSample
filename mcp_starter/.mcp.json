@@ -10,6 +10,11 @@
             "args": ["-y", "@modelcontextprotocol/server-github"],
             "env": {"GITHUB_TOKEN": "${GITHUB_TOKEN}"},
             "type": "stdio"
-        }
+        },
+       "summarizer": {
+           "command": "uv",
+           "args": ["run", "--with", "mcp<2", "summarizer_server.py"],
+           "type": "stdio"
+       }
     }
 }
