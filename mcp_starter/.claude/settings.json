@@ -1,0 +1,15 @@
+{
+    "hooks": {
+        "PostToolUse": [
+            {
+                "matcher": "Bash",
+                "hooks": [
+                    {
+                        "type": "command",
+                        "command": "uv run --no-project --quiet \"$CLAUDE_PROJECT_DIR/.claude/hooks/ruff_after_commit.py\""
+                    }
+                ]
+            }
+        ]
+    }
+}

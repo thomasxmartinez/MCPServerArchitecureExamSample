@@ -33,3 +33,7 @@ claude mcp list
 ```
 
 All three should show `Connected`. `.env` is gitignored; never commit your token.
+
+## Hooks
+
+`mcp_starter/.claude/settings.json` registers a `PostToolUse` hook: after Claude runs a `git commit`, it runs `ruff check . --fix` (pinned to `ruff@0.17.6` via `uvx`). Fixes land as uncommitted changes. It only needs `uv`, which is already a prerequisite.
